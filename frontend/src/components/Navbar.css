@@ -1,0 +1,67 @@
+.civic-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  color: #19332a;
+  background: rgb(250 251 247 / 96%);
+  border-bottom: 1px solid #dce5dd;
+  box-shadow: 0 3px 12px rgb(25 51 42 / 4%);
+  backdrop-filter: blur(14px);
+}
+
+.civic-navbar-inner {
+  width: min(1440px, calc(100% - 48px));
+  min-height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 21px;
+}
+
+.civic-navbar-brand {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #19332a;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.civic-navbar-brand > span:last-child > span { color: #126747; }
+.civic-navbar-mark { width: 34px; height: 34px; display: grid; place-items: center; color: #fff; background: #126747; border-radius: 8px; }
+.civic-navbar-links { display: flex; align-items: center; gap: 2px; }
+.civic-nav-link, .civic-account-link { min-height: 36px; padding: 0 9px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; color: #58665e; border-radius: 5px; font-size: 11px; font-weight: 680; text-decoration: none; white-space: nowrap; transition: color .16s ease, background .16s ease; }
+.civic-nav-link:hover, .civic-account-link:hover, .civic-nav-link.is-active, .civic-account-link.is-active { color: #126747; background: #e9f1e9; }
+.civic-nav-report { color: #126747; }
+.civic-nav-report svg { color: #2f7184; }
+.civic-nav-report.is-active { color: #fff; background: #126747; }
+.civic-nav-report.is-active svg { color: #fff; }
+.civic-navbar-account { flex: 0 0 auto; display: flex; align-items: center; gap: 7px; }
+.civic-signup-link { min-height: 35px; padding: 0 13px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; color: #fff; background: #126747; border: 1px solid #126747; border-radius: 6px; font: inherit; font-size: 10px; font-weight: 750; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background .16s ease, border-color .16s ease; }
+.civic-signup-link:hover, .civic-signup-link.is-active { background: #0d5038; border-color: #0d5038; }
+.civic-menu-toggle, .civic-mobile-menu { display: none; }
+.civic-navbar a:focus-visible, .civic-navbar button:focus-visible { outline: 2px solid #3b8a6a; outline-offset: 3px; }
+
+@media (max-width: 768px) {
+  .civic-navbar-inner { min-height: 64px; }
+  .civic-navbar-links, .civic-navbar-account { display: none; }
+  .civic-menu-toggle { width: 38px; height: 38px; display: grid; place-items: center; color: #126747; background: #edf3ed; border: 1px solid #dce7dd; border-radius: 6px; cursor: pointer; }
+  .civic-mobile-menu { padding: 9px max(24px, calc((100% - 1440px) / 2)); display: grid; gap: 3px; background: #fafbf7; border-top: 1px solid #e5ebe4; box-shadow: 0 14px 22px rgb(25 51 42 / 8%); }
+  .civic-mobile-link { min-height: 42px; padding: 0 12px; display: flex; align-items: center; gap: 9px; color: #47584e; background: transparent; border: 0; border-radius: 5px; font: inherit; font-size: 12px; font-weight: 680; text-align: left; text-decoration: none; cursor: pointer; }
+  .civic-mobile-link:hover, .civic-mobile-link.is-active { color: #126747; background: #eaf2e9; }
+  .civic-mobile-link svg { color: #2f7184; }
+  .civic-mobile-account { margin-top: 6px; padding-top: 7px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border-top: 1px solid #e1e8e0; }
+  .civic-mobile-signup { min-height: 40px; display: grid; place-items: center; color: white; background: #126747; border-radius: 5px; font-size: 11px; font-weight: 750; text-decoration: none; }
+  .civic-mobile-signup.is-active { background: #0d5038; }
+}
+
+@media (max-width: 480px) {
+  .civic-navbar-inner { width: calc(100% - 32px); min-height: 60px; }
+  .civic-navbar-brand { font-size: 17px; }
+  .civic-navbar-mark { width: 32px; height: 32px; }
+  .civic-mobile-menu { padding-inline: 16px; }
+}
