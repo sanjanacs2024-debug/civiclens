@@ -29,7 +29,7 @@ export default function IssueCard({ issue }) {
         {/* Card Header Image */}
         <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
           <img
-            src={issue.image}
+            src={`${import.meta.env.VITE_API_URL?.replace('/api', '')}${issue.image}`}
             alt={issue.title}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
