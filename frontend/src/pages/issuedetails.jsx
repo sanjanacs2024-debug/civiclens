@@ -98,7 +98,11 @@ export default function IssueDetails() {
           <div className="space-y-8 lg:col-span-2">
             <div className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-md">
               <div className="relative h-96 w-full bg-slate-900">
-                <img src={issue.image} alt={issue.title} className="h-full w-full object-cover" />
+                <img
+  src={`${import.meta.env.VITE_API_URL?.replace('/api', '')}${issue.image}`}
+  alt={issue.title}
+  className="h-full w-full object-cover"
+/>
               </div>
               <div className="p-6">
                 <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider">Citizen Report Description</h3>
