@@ -485,7 +485,7 @@ export default function Home() {
             <div className="recent-grid">
               {recentIssues.map((issue, index) => (
                 <Link to={`/issue/${issue.id}`} className="recent-card reveal-item" style={{ "--i": index }} key={issue.id}>
-                  <img src={`${import.meta.env.VITE_API_URL?.replace('/api', '')}${issue.image}`} alt={issue.title} loading="lazy" />
+                  <img src={issue.image} alt={issue.title} loading="lazy" />
                   <div className="recent-card-content">
                     <div className="recent-meta"><span>{issue.category}</span><span className={`issue-status ${issue.status === "Resolved" ? "issue-status-resolved" : issue.status === "Escalated" ? "issue-status-escalated" : ""}`}>{issue.status}</span></div>
                     <h3>{issue.title}</h3>

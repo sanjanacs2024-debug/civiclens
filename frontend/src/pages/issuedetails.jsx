@@ -99,7 +99,7 @@ export default function IssueDetails() {
             <div className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-md">
               <div className="relative h-96 w-full bg-slate-900">
                 <img
-  src={`${import.meta.env.VITE_API_URL?.replace('/api', '')}${issue.image}`}
+ src={issue.image}
   alt={issue.title}
   className="h-full w-full object-cover"
 />
